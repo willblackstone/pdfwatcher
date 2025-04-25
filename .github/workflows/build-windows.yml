@@ -11,7 +11,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/upload-artifact@v2
+      - uses: actions/checkout@v3
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v4
@@ -37,7 +37,7 @@ jobs:
             pdfwatcherapp1.py
 
       - name: Upload Windows build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: windows-dist
           path: dist/PDFWatcher
